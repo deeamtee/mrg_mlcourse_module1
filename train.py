@@ -24,6 +24,7 @@ def gradient(X, weights, y):
     p = softmax(weights, X)
     return np.dot(np.transpose(p - y), X) / (len(X))
 
+#Спасибо https://github.com/Tatiana-Golubeva/mrg_mlcourse_module1/blob/master/train.py
 def grad_step(X, y, current_weights, step):
     while True:
         current_loss = loss(X, y, current_weights)
